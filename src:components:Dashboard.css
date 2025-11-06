@@ -1,0 +1,277 @@
+.dashboard {
+  padding: 2rem 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content > div:first-child {
+  text-align: left;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #e2b714 0%, #f5c61f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #888;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  background: #1a1a1a;
+  border-color: #e2b714;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(226, 183, 20, 0.2);
+}
+
+.icon-btn:active {
+  transform: translateY(0);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stat-card {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  border-color: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Roboto Mono', monospace;
+  color: #e0e0e0;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value.highlight {
+  color: #e2b714;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.recent-games {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.games-table {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 160px 100px 80px 100px 80px 110px;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 160px 100px 80px 100px 80px 110px;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #2a2a2a;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  align-items: center;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background: #1a1a1a;
+  border-left: 3px solid #e2b714;
+  padding-left: calc(1rem - 3px);
+}
+
+.cell-date {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.cell-difficulty .difficulty-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.difficulty-badge.easy {
+  background: #4ade8033;
+  color: #4ade80;
+}
+
+.difficulty-badge.normal {
+  background: #60a5fa33;
+  color: #60a5fa;
+}
+
+.difficulty-badge.hard {
+  background: #f8717133;
+  color: #f87171;
+}
+
+.cell-duration {
+  color: #e0e0e0;
+}
+
+.cell-accuracy .good {
+  color: #4ade80;
+}
+
+.cell-accuracy .ok {
+  color: #fbbf24;
+}
+
+.cell-accuracy .bad {
+  color: #f87171;
+}
+
+.cell-qpm {
+  color: #60a5fa;
+}
+
+.cell-attempts {
+  color: #e0e0e0;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 2rem;
+}
+
+.empty-state p {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.start-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  
+  .table-header {
+    display: none;
+  }
+  
+  .table-row > div::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #888;
+    margin-right: 0.5rem;
+  }
+}
